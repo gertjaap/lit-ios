@@ -24,7 +24,18 @@
 
 +(NSData *)getKey {
     // TODO Generate and store in KeyChain
-    NSString *key = @"4b34iofasdfaposd";
+    NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:@"privateKey"];
+    if(key == nil) {
+        NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
+        NSMutableString *s = [NSMutableString stringWithCapacity:20];
+        for (NSUInteger i = 0U; i < 20; i++) {
+            u_int32_t r = arc4random() % [alphabet length];
+            unichar c = [alphabet characterAtIndex:r];
+            [s appendFormat:@"%C", c];
+        }
+        key = [NSString stringWithFormat:@"%@", s];
+        [[NSUserDefaults standardUserDefaults] setObject:key forKey:@"privateKey"];
+    }
     NSData *privKey = [key dataUsingEncoding:NSASCIIStringEncoding];
     return privKey;
 }

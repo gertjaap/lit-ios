@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31FEF39214051CC008C3F4E /* webui in Resources */ = {isa = PBXBuildFile; fileRef = A31FEF38214051CC008C3F4E /* webui */; };
 		A3A01135211B66980001BFCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A01134211B66980001BFCC /* AppDelegate.m */; };
 		A3A01138211B66980001BFCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A01137211B66980001BFCC /* ViewController.m */; };
 		A3A0113B211B66980001BFCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A01139211B66980001BFCC /* Main.storyboard */; };
@@ -16,11 +17,11 @@
 		A3F2856E211C50D9006CFB6B /* Litrpcproxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F2856D211C50D9006CFB6B /* Litrpcproxy.framework */; };
 		A3F28571211C5185006CFB6B /* ProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F28570211C5185006CFB6B /* ProxyManager.m */; };
 		A3F28574211C55A9006CFB6B /* BootstrapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F28573211C55A9006CFB6B /* BootstrapViewController.m */; };
-		A3F28576211C6408006CFB6B /* webui in Resources */ = {isa = PBXBuildFile; fileRef = A3F28575211C6408006CFB6B /* webui */; };
 		A3F28578211C64F4006CFB6B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F28577211C64F4006CFB6B /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A31FEF38214051CC008C3F4E /* webui */ = {isa = PBXFileReference; lastKnownFileType = folder; path = webui; sourceTree = "<group>"; };
 		A3A01130211B66980001BFCC /* LitPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A01133211B66980001BFCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A3A01134211B66980001BFCC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		A3F28570211C5185006CFB6B /* ProxyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProxyManager.m; sourceTree = "<group>"; };
 		A3F28572211C55A9006CFB6B /* BootstrapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BootstrapViewController.h; sourceTree = "<group>"; };
 		A3F28573211C55A9006CFB6B /* BootstrapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BootstrapViewController.m; sourceTree = "<group>"; };
-		A3F28575211C6408006CFB6B /* webui */ = {isa = PBXFileReference; lastKnownFileType = folder; path = webui; sourceTree = "<group>"; };
 		A3F28577211C64F4006CFB6B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 		A3A01132211B66980001BFCC /* LitPOC */ = {
 			isa = PBXGroup;
 			children = (
-				A3F28575211C6408006CFB6B /* webui */,
+				A31FEF38214051CC008C3F4E /* webui */,
 				A3A01133211B66980001BFCC /* AppDelegate.h */,
 				A3A01134211B66980001BFCC /* AppDelegate.m */,
 				A3A01136211B66980001BFCC /* ViewController.h */,
@@ -158,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3A01140211B669B0001BFCC /* LaunchScreen.storyboard in Resources */,
-				A3F28576211C6408006CFB6B /* webui in Resources */,
+				A31FEF39214051CC008C3F4E /* webui in Resources */,
 				A3A0113D211B669B0001BFCC /* Assets.xcassets in Resources */,
 				A3A0113B211B66980001BFCC /* Main.storyboard in Resources */,
 			);
@@ -316,7 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SBZD5G3DK4;
+				DEVELOPMENT_TEAM = K5665JW5W2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LitPOC/Info.plist;
@@ -324,7 +324,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.gertjaap.LitPOC;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gertjaap.lit-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
@@ -336,7 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SBZD5G3DK4;
+				DEVELOPMENT_TEAM = K5665JW5W2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LitPOC/Info.plist;
@@ -344,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.gertjaap.LitPOC;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gertjaap.lit-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
