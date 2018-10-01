@@ -1,3 +1,8 @@
-LitPOC/Litrpcproxy.framework/
+ios/LitPOC/Litrpcproxy.framework/
 lit-rpc-proxy/Litrpcproxy.framework/
-LitPOC/LitPOC.xcodeproj/xcuserdata/
+ios/LitPOC/LitPOC.xcodeproj/xcuserdata/
+android/litrpcproxy/litrpcproxy.aar
+lit-rpc-proxy/litrpcproxy-sources.jar
+lit-rpc-proxy/litrpcproxy.aar
+ios/LitPOC/webui
+android/app/src/main/assets/lit-webui
