@@ -1,15 +1,26 @@
-# lit-ios
-Remote control client for LIT running on iOS
+# lit-mobile
+Remote control clients for LIT running on iOS and Android
 
 # Building
 
-Build the RPC proxy framework:
+Build the RPC proxy framework. Requires gomobile, Android NDK and/or XCode:
 ```
 cd lit-rpc-proxy
-gomobile bind -target=ios
-cp -r Litrpcproxy.framework ../LitPOC
+./build.sh
 ```
 
-Build the WebUI and place the build output into the `webui` subfolder of the project (overwrite existing files)
+Build the WebUI and place the build output into two folders:
 
-Then, open the LitPOC.xcodeproj and build/run it.
+```
+android/app/src/main/assets/lit-webui
+```
+(For Android)
+
+and 
+
+```
+ios/LitPOC/webui
+```
+(For iOS)
+
+Then, open `ios/LitPOC/LitPOC.xcodeproj` in XCode or the `android` folder in Android Studio and build/run it.
