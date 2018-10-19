@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <Litrpcproxy/Litrpcproxy.h>
+#import "ProxyManager.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = [UIColor colorWithRed:194/255.0f green:192/255.0f blue:191 /255.0f alpha:1.0f];
+    }
     
+    [ProxyManager startProxy];
     return YES;
 }
 

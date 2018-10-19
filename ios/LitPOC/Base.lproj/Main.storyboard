@@ -1,125 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cqG-12-OaH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bootstrap View Controller-->
-        <scene sceneID="cVD-zl-Xjm">
-            <objects>
-                <viewController id="cqG-12-OaH" customClass="BootstrapViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JXD-qG-bNP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPl-NP-YAU">
-                                <rect key="frame" x="67" y="181.5" width="240" height="324"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to lit!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCJ-2x-OJS">
-                                        <rect key="frame" x="63" y="53" width="114" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="1sZ-eK-BEf"/>
-                                            <constraint firstAttribute="width" constant="114" id="xDF-qX-U2K"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pWx-PM-xjr">
-                                        <rect key="frame" x="0.0" y="82" width="240" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="Gms-qD-V9m"/>
-                                            <constraint firstAttribute="height" constant="128" id="KdP-ef-Z6d"/>
-                                        </constraints>
-                                        <string key="text">To get started, you need to pair this app with your main lit instance. Go to Settings &gt; Pair New Device on your main lit installation to get started.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-V2-qex">
-                                        <rect key="frame" x="105" y="194" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="3FB-pr-uE1"/>
-                                            <constraint firstAttribute="height" constant="30" id="g9G-Jk-vwC"/>
-                                        </constraints>
-                                        <state key="normal" title="Pair"/>
-                                        <connections>
-                                            <action selector="startScan:" destination="cqG-12-OaH" eventType="touchUpInside" id="XLE-A1-fO7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="uHt-V2-qex" firstAttribute="top" secondItem="pWx-PM-xjr" secondAttribute="bottom" constant="-16" id="Grv-Op-pfn"/>
-                                    <constraint firstItem="pWx-PM-xjr" firstAttribute="top" secondItem="CCJ-2x-OJS" secondAttribute="bottom" constant="8" id="H4a-jQ-c7p"/>
-                                    <constraint firstItem="CCJ-2x-OJS" firstAttribute="centerX" secondItem="xPl-NP-YAU" secondAttribute="centerX" id="NGY-SM-32x"/>
-                                    <constraint firstItem="CCJ-2x-OJS" firstAttribute="top" secondItem="xPl-NP-YAU" secondAttribute="top" constant="53" id="PVk-WQ-0DL"/>
-                                    <constraint firstItem="pWx-PM-xjr" firstAttribute="centerX" secondItem="xPl-NP-YAU" secondAttribute="centerX" id="XOL-dl-7Ys"/>
-                                    <constraint firstAttribute="height" constant="324" id="e5c-VU-QJj"/>
-                                    <constraint firstItem="uHt-V2-qex" firstAttribute="centerX" secondItem="xPl-NP-YAU" secondAttribute="centerX" id="qOd-sz-kyb"/>
-                                    <constraint firstAttribute="width" constant="240" id="xcL-pT-1Se"/>
-                                </constraints>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFF-SQ-KHX">
-                                <rect key="frame" x="0.0" y="20" width="375" height="667"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9U-de-Tob">
-                                        <rect key="frame" x="46" y="193" width="283" height="281"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="283" id="7gL-9B-iO4"/>
-                                            <constraint firstAttribute="height" constant="281" id="zn8-XN-kCj"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKo-Du-IMC">
-                                        <rect key="frame" x="157" y="482" width="60" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="NgX-NI-8ma"/>
-                                            <constraint firstAttribute="height" constant="30" id="gtH-e3-ffz"/>
-                                        </constraints>
-                                        <state key="normal" title="Cancel"/>
-                                        <connections>
-                                            <action selector="stopScan:" destination="cqG-12-OaH" eventType="touchUpInside" id="98K-51-8s6"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="c9U-de-Tob" firstAttribute="centerX" secondItem="jFF-SQ-KHX" secondAttribute="centerX" id="1BH-xp-kua"/>
-                                    <constraint firstItem="SKo-Du-IMC" firstAttribute="centerX" secondItem="jFF-SQ-KHX" secondAttribute="centerX" id="oJw-nk-Hyj"/>
-                                    <constraint firstItem="SKo-Du-IMC" firstAttribute="top" secondItem="c9U-de-Tob" secondAttribute="bottom" constant="8" id="p43-ga-KPc"/>
-                                    <constraint firstItem="c9U-de-Tob" firstAttribute="centerY" secondItem="jFF-SQ-KHX" secondAttribute="centerY" id="xbU-wR-ZyD"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="xPl-NP-YAU" firstAttribute="centerY" secondItem="hVZ-6i-2pW" secondAttribute="centerY" id="K7A-tV-nNO"/>
-                            <constraint firstItem="jFF-SQ-KHX" firstAttribute="height" secondItem="JXD-qG-bNP" secondAttribute="height" id="Q1C-vq-dVt"/>
-                            <constraint firstItem="jFF-SQ-KHX" firstAttribute="top" secondItem="hVZ-6i-2pW" secondAttribute="top" id="eTu-Rn-VjZ"/>
-                            <constraint firstItem="jFF-SQ-KHX" firstAttribute="leading" secondItem="hVZ-6i-2pW" secondAttribute="leading" id="rLN-wz-oeZ"/>
-                            <constraint firstItem="xPl-NP-YAU" firstAttribute="centerX" secondItem="hVZ-6i-2pW" secondAttribute="centerX" id="yyU-rf-Sna"/>
-                            <constraint firstItem="jFF-SQ-KHX" firstAttribute="width" secondItem="JXD-qG-bNP" secondAttribute="width" id="zt2-0i-mx7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="hVZ-6i-2pW"/>
-                    </view>
-                    <connections>
-                        <outlet property="introView" destination="xPl-NP-YAU" id="y2S-of-M8L"/>
-                        <outlet property="previewView" destination="c9U-de-Tob" id="nuQ-5r-udJ"/>
-                        <outlet property="scanView" destination="jFF-SQ-KHX" id="OaS-Gw-yX0"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToMain" id="Mv7-wZ-JRW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nvn-NO-LYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-882.39999999999998" y="242.42878560719643"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -127,28 +17,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-tr-umV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="lH1-tr-umV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="eFj-Al-LQm"/>
-                            <constraint firstItem="lH1-tr-umV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="g1P-bP-hvX"/>
-                            <constraint firstItem="lH1-tr-umV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r9z-uM-UQl"/>
-                            <constraint firstItem="lH1-tr-umV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uaF-9Y-uIH"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="webView" destination="lH1-tr-umV" id="RW3-Mu-hg6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

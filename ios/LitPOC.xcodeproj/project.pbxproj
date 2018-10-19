@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		A31FEF39214051CC008C3F4E /* webui in Resources */ = {isa = PBXBuildFile; fileRef = A31FEF38214051CC008C3F4E /* webui */; };
+		A3352ABF2174997C00EDF6EA /* Litrpcproxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3352ABE2174997C00EDF6EA /* Litrpcproxy.framework */; };
 		A3A01135211B66980001BFCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A01134211B66980001BFCC /* AppDelegate.m */; };
 		A3A01138211B66980001BFCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A01137211B66980001BFCC /* ViewController.m */; };
 		A3A0113B211B66980001BFCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A01139211B66980001BFCC /* Main.storyboard */; };
 		A3A0113D211B669B0001BFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A0113C211B669B0001BFCC /* Assets.xcassets */; };
 		A3A01140211B669B0001BFCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A0113E211B669B0001BFCC /* LaunchScreen.storyboard */; };
 		A3A01143211B669B0001BFCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A01142211B669B0001BFCC /* main.m */; };
-		A3F2856E211C50D9006CFB6B /* Litrpcproxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F2856D211C50D9006CFB6B /* Litrpcproxy.framework */; };
 		A3F28571211C5185006CFB6B /* ProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F28570211C5185006CFB6B /* ProxyManager.m */; };
-		A3F28574211C55A9006CFB6B /* BootstrapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F28573211C55A9006CFB6B /* BootstrapViewController.m */; };
 		A3F28578211C64F4006CFB6B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F28577211C64F4006CFB6B /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A31FEF38214051CC008C3F4E /* webui */ = {isa = PBXFileReference; lastKnownFileType = folder; path = webui; sourceTree = "<group>"; };
+		A3352ABE2174997C00EDF6EA /* Litrpcproxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Litrpcproxy.framework; path = LitPOC/Litrpcproxy.framework; sourceTree = "<group>"; };
 		A3A01130211B66980001BFCC /* LitPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A01133211B66980001BFCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A3A01134211B66980001BFCC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,11 +32,8 @@
 		A3A0113F211B669B0001BFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3A01141211B669B0001BFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3A01142211B669B0001BFCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A3F2856D211C50D9006CFB6B /* Litrpcproxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Litrpcproxy.framework; sourceTree = "<group>"; };
 		A3F2856F211C5185006CFB6B /* ProxyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxyManager.h; sourceTree = "<group>"; };
 		A3F28570211C5185006CFB6B /* ProxyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProxyManager.m; sourceTree = "<group>"; };
-		A3F28572211C55A9006CFB6B /* BootstrapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BootstrapViewController.h; sourceTree = "<group>"; };
-		A3F28573211C55A9006CFB6B /* BootstrapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BootstrapViewController.m; sourceTree = "<group>"; };
 		A3F28577211C64F4006CFB6B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -45,8 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3352ABF2174997C00EDF6EA /* Litrpcproxy.framework in Frameworks */,
 				A3F28578211C64F4006CFB6B /* WebKit.framework in Frameworks */,
-				A3F2856E211C50D9006CFB6B /* Litrpcproxy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +82,6 @@
 				A3A01142211B669B0001BFCC /* main.m */,
 				A3F2856F211C5185006CFB6B /* ProxyManager.h */,
 				A3F28570211C5185006CFB6B /* ProxyManager.m */,
-				A3F28572211C55A9006CFB6B /* BootstrapViewController.h */,
-				A3F28573211C55A9006CFB6B /* BootstrapViewController.m */,
 			);
 			path = LitPOC;
 			sourceTree = "<group>";
@@ -94,8 +89,8 @@
 		A3A01149211B66D60001BFCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3352ABE2174997C00EDF6EA /* Litrpcproxy.framework */,
 				A3F28577211C64F4006CFB6B /* WebKit.framework */,
-				A3F2856D211C50D9006CFB6B /* Litrpcproxy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,7 +166,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F28574211C55A9006CFB6B /* BootstrapViewController.m in Sources */,
 				A3A01138211B66980001BFCC /* ViewController.m in Sources */,
 				A3A01143211B669B0001BFCC /* main.m in Sources */,
 				A3F28571211C5185006CFB6B /* ProxyManager.m in Sources */,
@@ -318,7 +312,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5665JW5W2;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LitPOC",
+				);
 				INFOPLIST_FILE = LitPOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,7 +335,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5665JW5W2;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LitPOC",
+				);
 				INFOPLIST_FILE = LitPOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -24,17 +24,17 @@
 
 +(NSData *)getKey {
     // TODO Generate and store in KeyChain
-    NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:@"privateKey"];
+    NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:@"privateKey32"];
     if(key == nil) {
         NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
         NSMutableString *s = [NSMutableString stringWithCapacity:20];
-        for (NSUInteger i = 0U; i < 20; i++) {
+        for (NSUInteger i = 0U; i < 32; i++) {
             u_int32_t r = arc4random() % [alphabet length];
             unichar c = [alphabet characterAtIndex:r];
             [s appendFormat:@"%C", c];
         }
         key = [NSString stringWithFormat:@"%@", s];
-        [[NSUserDefaults standardUserDefaults] setObject:key forKey:@"privateKey"];
+        [[NSUserDefaults standardUserDefaults] setObject:key forKey:@"privateKey32"];
     }
     NSData *privKey = [key dataUsingEncoding:NSASCIIStringEncoding];
     return privKey;
@@ -42,9 +42,8 @@
 
 +(void)startProxy {
     NSData *key = [ProxyManager getKey];
-    NSString *adr = [[NSUserDefaults standardUserDefaults] objectForKey:@"nodeAddress"];
     NSError *err;
-    LitrpcproxyStartLitRpcProxy(adr, key, 49583, &err);
+    LitrpcproxyStartUnconnectedProxy(key, 8001);
     
 }
 @end
