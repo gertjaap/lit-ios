@@ -3,12 +3,14 @@ package edu.mit.dci.lit;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,6 +19,9 @@ import android.webkit.PermissionRequest;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import java.util.Random;
+
 import litrpcproxy.Litrpcproxy;
 
 public class LitMainActivity extends AppCompatActivity {
@@ -47,9 +52,16 @@ public class LitMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        byte[] mKey = new byte[] { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 };
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        byte[] key = new byte[32];
+        if(!sharedPref.contains("NODE_KEY_32")) {
+            new Random().nextBytes(key);
+            sharedPref.edit().putString("NODE_KEY_32",Base64.encodeToString(key, Base64.DEFAULT)).apply();
+        } else {
+            key = Base64.decode(sharedPref.getString("NODE_KEY_32",""), Base64.DEFAULT);
+        }
         try {
-            Litrpcproxy.startUnconnectedProxy(mKey, 45678);
+            Litrpcproxy.startUnconnectedProxy(key, 45678);
         } catch (Exception ex) {
             Log.e("LitRPC", ex.toString());
         }
@@ -83,6 +95,7 @@ public class LitMainActivity extends AppCompatActivity {
 
         // Create new Webview to hold the WebUI
         webView = new WebView(getApplicationContext());
+        webView.clearCache(true);
         webView.setWebChromeClient(new WebChromeClient(){
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
@@ -103,15 +116,14 @@ public class LitMainActivity extends AppCompatActivity {
         webSettings.setBuiltInZoomControls(true);
         webSettings.setAllowFileAccess(true);
         webSettings.setSupportZoom(false);
+        webSettings.setAppCacheEnabled(false);
+        webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
 
         setContentView(webView);
         WebView.setWebContentsDebuggingEnabled(true);
-        webView.loadUrl("file:///android_asset/lit-webui/index.html?port=45678");
-
-
-
-
+        //webView.loadUrl("https://dcidemo.media.mit.edu/webui/?port=45678");
+        webView.loadUrl("file:///android_asset/webui/index.html?port=45678");
     }
 
 }
